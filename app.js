@@ -7,8 +7,12 @@ app.get('/', (req, res) => {
     res.send('Hello, World!');
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log(`Server is listening at http://localhost:${port}`);
 });
+
+app.close = (callback) => {
+    server.close(callback);
+  };
 
 module.exports = app; // Exportar la aplicación para pruebas

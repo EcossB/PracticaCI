@@ -9,3 +9,9 @@ describe('GET /', () => {
         expect(response.text).toBe('Hello, World!');
     });
 });
+
+afterAll((done) => {
+    app.close(() => {
+      done();
+    });
+  });
