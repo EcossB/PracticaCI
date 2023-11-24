@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 
 
 app.get('/', (req, res) => {
-    res.send('Practica creada por erwing Coss, Pruebas unitarias con GitHub Actions!');
+    res.send('Practica creada por erwing Coss, Pruebas unitarias con GitHub Actions y tambien protected branch en main.!');
 });
 
 const server = app.listen(port, () => {
